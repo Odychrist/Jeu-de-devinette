@@ -1,0 +1,64 @@
+const number = Math.floor(Math.random() * 100);
+const userNumber = document.querySelector(".js-input-element");
+const buttonElement = document.querySelector(".js-button-element");
+const resultElement = document.querySelector(".js-result");
+let essai = 4;
+let html = "";
+buttonElement.addEventListener("click", () => {
+  const valid = /^\d+$/.test(userNumber.value);
+  console.log(number);
+
+  if (!valid) {
+    html = `
+      <p class="result-bad">
+        Veuillez entrer un nombre valide.
+      </p>
+    `;
+    resultElement.innerHTML = html;
+  }
+
+  if (userNumber.value == number) {
+    html = `
+      <p class="result-good">
+        Bravo ! Le nombre a deviné était bien ${number}. 
+      </p>
+      <p class="result-good">
+        Vous l'avez réussi en ${5 - essai} essai${5 - essai > 1 ? "s" : ""}.
+      </p>
+    `;
+    userNumber.value = "";
+    resultElement.innerHTML = html;
+  } else if (userNumber.value != number && essai == 0) {
+    html = `
+      <p class="result-bad">
+        Désolé ! Vous n'avez pas trouvé le bon nombre. 
+      </p>
+      <p class="result-bad">
+        Le nombre à deviner était ${number}
+      </p>
+    `;
+
+    resultElement.innerHTML = html;
+    userNumber.value = "";
+  } else if (userNumber.value < number && userNumber.value != "") {
+    essai -= 1;
+    html = `
+      <p class="">
+        Le nombre est plus grand que ${userNumber.value} 
+      </p>
+    `;
+
+    resultElement.innerHTML = html;
+    userNumber.value = "";
+  } else if (userNumber.value > number && userNumber.value != "") {
+    essai -= 1;
+    html = `
+      <p class="">
+        Le nombre est plus petit que ${userNumber.value} 
+      </p>
+    `;
+
+    resultElement.innerHTML = html;
+    userNumber.value = "";
+  }
+});
