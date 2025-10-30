@@ -26,7 +26,8 @@ body {
 
 .title {
   font-size: 35px;
-  color: rgb(13, 112, 112);
+  /* color: rgb(13, 112, 112); */
+  color: blue;
   margin-bottom: 4px;
 }
 
