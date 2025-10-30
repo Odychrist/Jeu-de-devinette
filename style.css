@@ -50,20 +50,34 @@ body {
   outline: none;
 }
 
-.button-element {
-  padding: 12px;
-  background-color: green;
-  border: 1px solid green;
-  font-size: 15px;
-  cursor: pointer;
-  color: white;
+.navbar-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
 }
 
 .result-div {
   display: flex;
   align-items: center;
   flex-direction: column;
+  
 }
+
+
+.button-element {
+  padding: 12px;
+  background-color: green;
+  border: 1px solid green;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 
 .result-bad {
   color:red
@@ -71,4 +85,13 @@ body {
 
 .result-good {
   color: green
+}
+
+.restart-button {
+  background-color: rgb(33, 124, 124);
+  padding: 10px;
+  color: white;
+  font-size: 15px;
+  border: 1px solid rgb(33, 124, 124);
+  border-radius: 5px;
 }

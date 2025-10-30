@@ -2,6 +2,8 @@ const number = Math.floor(Math.random() * 100);
 const userNumber = document.querySelector(".js-input-element");
 const buttonElement = document.querySelector(".js-button-element");
 const resultElement = document.querySelector(".js-result");
+const restartElement = document.querySelector(".js-restart-div");
+
 let essai = 4;
 let html = "";
 buttonElement.addEventListener("click", () => {
@@ -28,6 +30,8 @@ buttonElement.addEventListener("click", () => {
     `;
     userNumber.value = "";
     resultElement.innerHTML = html;
+    restartElement.innerHTML =
+      "<button class='restart-button js-restart-button'>Recommencer</button>";
   } else if (userNumber.value != number && essai == 0) {
     html = `
       <p class="result-bad">
@@ -40,6 +44,8 @@ buttonElement.addEventListener("click", () => {
 
     resultElement.innerHTML = html;
     userNumber.value = "";
+    restartElement.innerHTML =
+      "<button class='restart-button js-restart-button'>Recommencer</button>";
   } else if (userNumber.value < number && userNumber.value != "") {
     essai -= 1;
     html = `
@@ -61,4 +67,9 @@ buttonElement.addEventListener("click", () => {
     resultElement.innerHTML = html;
     userNumber.value = "";
   }
+
+  document.querySelector(".js-restart-button").addEventListener("click", () => {
+    essai = 4;
+    resultElement.innerHTML = "";
+  });
 });
