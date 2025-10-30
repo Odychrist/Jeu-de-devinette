@@ -9,7 +9,7 @@ body {
   justify-content: center;
   height: 100vh;
   background: rgb(62, 161, 161);
-  font-size: 17px;
+  font-size: 22px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 4px;
 }
@@ -25,7 +25,7 @@ body {
 }
 
 .title {
-  font-size: 30px;
+  font-size: 35px;
   color: rgb(13, 112, 112);
   margin-bottom: 4px;
 }
@@ -70,7 +70,7 @@ body {
   padding: 12px;
   background-color: green;
   border: 1px solid green;
-  font-size: 15px;
+  font-size: 17px;
   outline: none;
   cursor: pointer;
   color: white;
@@ -91,7 +91,7 @@ body {
   background-color: rgb(33, 124, 124);
   padding: 10px;
   color: white;
-  font-size: 15px;
+  font-size: 17px;
   border: 1px solid rgb(33, 124, 124);
   border-radius: 5px;
 }
