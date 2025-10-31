@@ -1,4 +1,4 @@
-const number = Math.floor(Math.random() * 100);
+let number = Math.floor(Math.random() * 100);
 const userNumber = document.querySelector(".js-input-element");
 const buttonElement = document.querySelector(".js-button-element");
 const resultElement = document.querySelector(".js-result");
@@ -70,5 +70,6 @@ buttonElement.addEventListener("click", () => {
   document.querySelector(".js-restart-button").addEventListener("click", () => {
     essai = 4;
     resultElement.innerHTML = "";
+    number = Math.floor(Math.random() * 100);
   });
 });
