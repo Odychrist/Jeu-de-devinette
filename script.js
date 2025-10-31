@@ -8,7 +8,6 @@ let essai = 4;
 let html = "";
 buttonElement.addEventListener("click", () => {
   const valid = /^\d+$/.test(userNumber.value);
-  console.log(number);
 
   if (!valid) {
     html = `
