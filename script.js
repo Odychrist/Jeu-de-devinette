@@ -71,5 +71,6 @@ buttonElement.addEventListener("click", () => {
     essai = 4;
     resultElement.innerHTML = "";
     number = Math.floor(Math.random() * 100);
+    restartElement.innerHTML = "";
   });
 });
